@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 import lombok.Data;
 
+import java.beans.IntrospectionException;
 import java.util.Date;
 
 @Data
@@ -22,7 +23,7 @@ public class SecondCustomer {
     private Date birthday;
 
     @JsonView(Views.Public.class)
-    private String follower;
+    private Integer follower;
 
     @JsonView(Views.Internal.class)
     private String password;
@@ -30,7 +31,7 @@ public class SecondCustomer {
     @JsonView(Views.Internal.class)
     private String email;
 
-    public SecondCustomer(String follower, String email, String password){
+    public SecondCustomer(String email, String password, Integer follower) {
         this.follower = follower;
         this.email = email;
         this.password = password;

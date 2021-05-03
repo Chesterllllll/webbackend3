@@ -16,8 +16,8 @@ import java.util.Date;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    CustomerRepository customerRepository;
+//    @Autowired
+//    CustomerRepository customerRepository;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
